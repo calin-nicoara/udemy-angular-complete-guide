@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showParagraph: boolean = true;
-  clicks: string[] = [];
+  clicks: Date[] = [];
 
   toggleParagraph() {
     this.showParagraph = !this.showParagraph;
-    this.clicks.push(Date.now().toString());
+    this.clicks.push(new Date());
   }
 
   getColor(index) {
