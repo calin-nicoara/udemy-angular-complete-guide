@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Recipe} from './recipe.model';
+import {$e} from 'codelyzer/angular/styles/chars';
 
 @Component({
   selector: 'app-recipes',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesComponent implements OnInit {
 
+  currentRecipe: Recipe;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onRecipeClicked(clickRecipe: Recipe) {
+    this.currentRecipe = clickRecipe;
+  }
 }

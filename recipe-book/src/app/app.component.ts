@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentLink = 'recipes';
   title = 'recipe-book';
+
+  onLinkActivated(currentLink: string) {
+    this.currentLink = currentLink;
+  }
 }
