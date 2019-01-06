@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Recipe} from './recipe.model';
-import {$e} from 'codelyzer/angular/styles/chars';
+import {RecipeService} from './recipe.service';
 
 @Component({
   selector: 'app-recipes',
@@ -10,12 +10,9 @@ import {$e} from 'codelyzer/angular/styles/chars';
 export class RecipesComponent implements OnInit {
 
   currentRecipe: Recipe;
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
-  }
-
-  onRecipeClicked(clickRecipe: Recipe) {
-    this.currentRecipe = clickRecipe;
+    this.recipeService.recipeSelected.subscribe(newRecipe => this.currentRecipe = newRecipe);
   }
 }
