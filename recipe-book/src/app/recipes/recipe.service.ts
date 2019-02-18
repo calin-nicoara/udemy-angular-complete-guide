@@ -34,7 +34,7 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
-  findRecipe(id: number): Recipe {
+  getRecipe(id: number): Recipe {
     return this.recipes.find(recipe => recipe.id === id)
   }
 
