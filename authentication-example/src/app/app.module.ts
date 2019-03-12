@@ -19,7 +19,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { RecipeService } from './recipes/recipe.service';
 import { DataStorageService } from './shared/data-storage.service';
 import { SigninComponent } from './auth/signin/signin.component';
-import { SignoutComponent } from './auth/signout/signout.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { SignoutComponent } from './auth/signout/signout.component';
     RecipeStartComponent,
     RecipeEditComponent,
     SigninComponent,
-    SignoutComponent
+    SignupComponent
   ],
   imports: [
     BrowserModule,
